@@ -37,10 +37,11 @@ class KillZone extends Component {
   }
 
   changeStatus(targetStatus) {
-    console.log(targetStatus);
-    this.setState(prevState => ({
-      status: "dead"
-    }));
+    console.log(`le status est ${targetStatus}`);
+
+    this.setState({
+      targetStatus: "dead"
+    });
   }
   render() {
     return (
