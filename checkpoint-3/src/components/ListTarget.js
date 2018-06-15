@@ -6,9 +6,15 @@ import Target from "./Target";
 // import Targer from "./Target";
 // import Target from "./Target";
 
-const ListTarget = ({ targets }) => (
+const ListTarget = ({ targets, change }) => (
   <ListGroup>
-    {targets.map((target, index) => <Target key={index} {...target} />)}
+    {targets.map((target, index) => (
+      <Target
+        key={target.id}
+        {...target}
+        change={() => change(target.status)}
+      />
+    ))}
   </ListGroup>
 );
 
